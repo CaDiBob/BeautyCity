@@ -1,0 +1,860 @@
+[
+{
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$1SjHrFkTNnmfLBXFhhEAoP$HzXtBna/Ta34E1+xjmvNqkOUGmEFfWmZlnffgaYaVJ8=",
+        "last_login": "2022-12-07T09:43:18.940Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@admin.ru",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-12-07T09:42:57.796Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "beauty_salon.salon",
+    "pk": 1,
+    "fields": {
+        "name": "Салон 1",
+        "address": "улица Малая Пироговская, 13 ст4"
+    }
+},
+{
+    "model": "beauty_salon.salon",
+    "pk": 2,
+    "fields": {
+        "name": "Салон 2",
+        "address": "Газетный переулок, 4"
+    }
+},
+{
+    "model": "beauty_salon.salon",
+    "pk": 3,
+    "fields": {
+        "name": "Салон 3",
+        "address": "Вознесенский переулок, 14"
+    }
+},
+{
+    "model": "beauty_salon.worker",
+    "pk": 1,
+    "fields": {
+        "name": "Ксения",
+        "specialization": 1,
+        "salon": 1,
+        "foto": "umnaya-ctrizhka-2019-ukorochennyj-bob-na-dugoobraznye-volosy_0pXctEN.jpg",
+        "reviews_qty": "Отзыв",
+        "experience": "1 год"
+    }
+},
+{
+    "model": "beauty_salon.worker",
+    "pk": 2,
+    "fields": {
+        "name": "Юлия",
+        "specialization": 2,
+        "salon": 2,
+        "foto": "umnaya-ctrizhka-2019-ukorochennyj-bob-na-dugoobraznye-volosy_y9Qkox4.jpg",
+        "reviews_qty": "Отзыв",
+        "experience": "2 года"
+    }
+},
+{
+    "model": "beauty_salon.worker",
+    "pk": 3,
+    "fields": {
+        "name": "Валерия",
+        "specialization": 1,
+        "salon": 3,
+        "foto": "1647894510_2-krasavica-info-p-krashenie-volosi-devushka-krasivo-foto-3_L91AsxO.jpg",
+        "reviews_qty": "Отзыв",
+        "experience": "5 лет"
+    }
+},
+{
+    "model": "beauty_salon.specialization",
+    "pk": 1,
+    "fields": {
+        "name": "Стрижка"
+    }
+},
+{
+    "model": "beauty_salon.specialization",
+    "pk": 2,
+    "fields": {
+        "name": "Покраска волос"
+    }
+},
+{
+    "model": "beauty_salon.order",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "procedure": 2,
+        "worker": 1,
+        "salon": 1,
+        "created_at": "2022-12-07T09:57:36Z",
+        "payment_method": "cashless",
+        "payment_status": "not_paid"
+    }
+},
+{
+    "model": "beauty_salon.order",
+    "pk": 2,
+    "fields": {
+        "user": 1,
+        "procedure": 1,
+        "worker": 2,
+        "salon": 2,
+        "created_at": "2022-12-07T09:57:59Z",
+        "payment_method": "cash",
+        "payment_status": "not_paid"
+    }
+},
+{
+    "model": "beauty_salon.order",
+    "pk": 3,
+    "fields": {
+        "user": 1,
+        "procedure": 2,
+        "worker": 3,
+        "salon": 3,
+        "created_at": "2022-12-07T09:58:15Z",
+        "payment_method": "cash",
+        "payment_status": "paid"
+    }
+},
+{
+    "model": "beauty_salon.procedure",
+    "pk": 1,
+    "fields": {
+        "name": "Покраска волос",
+        "descriptions": "Покраска волос",
+        "image": "1647894510_2-krasavica-info-p-krashenie-volosi-devushka-krasivo-foto-3.jpg",
+        "duration": "1 час",
+        "price": "1000.00"
+    }
+},
+{
+    "model": "beauty_salon.procedure",
+    "pk": 2,
+    "fields": {
+        "name": "Стрижка",
+        "descriptions": "Стрижка",
+        "image": "umnaya-ctrizhka-2019-ukorochennyj-bob-na-dugoobraznye-volosy.jpg",
+        "duration": "1 час",
+        "price": "800.00"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2022-12-07T09:44:41.110Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "1",
+        "object_repr": "Стрижка",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2022-12-07T09:44:48.712Z",
+        "user": 1,
+        "content_type": 5,
+        "object_id": "2",
+        "object_repr": "Покраска волос",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2022-12-07T09:50:02.694Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "1",
+        "object_repr": "Салон 1 улица Малая Пироговская, 13 ст4",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2022-12-07T09:50:50.981Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "2",
+        "object_repr": "Салон 2 Газетный переулок, 4",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2022-12-07T09:51:10.784Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "3",
+        "object_repr": "Салон 3 Вознесенский переулок, 14",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2022-12-07T09:53:51.648Z",
+        "user": 1,
+        "content_type": 3,
+        "object_id": "1",
+        "object_repr": "Покраска волос 1000",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2022-12-07T09:54:59.138Z",
+        "user": 1,
+        "content_type": 3,
+        "object_id": "2",
+        "object_repr": "Стрижка 800",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2022-12-07T09:55:34.859Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "1",
+        "object_repr": "Ксения Стрижка Салон 1 улица Малая Пироговская, 13 ст4",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2022-12-07T09:56:18.115Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "2",
+        "object_repr": "Юлия Покраска волос Салон 2 Газетный переулок, 4",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2022-12-07T09:57:27.501Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "3",
+        "object_repr": "Валерия Стрижка Салон 3 Вознесенский переулок, 14",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2022-12-07T09:57:59.632Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "1",
+        "object_repr": "Стрижка 800.00 Ксения",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2022-12-07T09:58:13.257Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "2",
+        "object_repr": "Покраска волос 1000.00 Юлия",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2022-12-07T09:58:32.613Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "3",
+        "object_repr": "Стрижка 800.00 Валерия",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 1,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 1,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 1,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 1,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add Заказ",
+        "content_type": 2,
+        "codename": "add_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change Заказ",
+        "content_type": 2,
+        "codename": "change_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete Заказ",
+        "content_type": 2,
+        "codename": "delete_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view Заказ",
+        "content_type": 2,
+        "codename": "view_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add Процедура",
+        "content_type": 3,
+        "codename": "add_procedure"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change Процедура",
+        "content_type": 3,
+        "codename": "change_procedure"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete Процедура",
+        "content_type": 3,
+        "codename": "delete_procedure"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view Процедура",
+        "content_type": 3,
+        "codename": "view_procedure"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add Салон",
+        "content_type": 4,
+        "codename": "add_salon"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change Салон",
+        "content_type": 4,
+        "codename": "change_salon"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete Салон",
+        "content_type": 4,
+        "codename": "delete_salon"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view Салон",
+        "content_type": 4,
+        "codename": "view_salon"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add Специализация",
+        "content_type": 5,
+        "codename": "add_specialization"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change Специализация",
+        "content_type": 5,
+        "codename": "change_specialization"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete Специализация",
+        "content_type": 5,
+        "codename": "delete_specialization"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view Специализация",
+        "content_type": 5,
+        "codename": "view_specialization"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add Специалист",
+        "content_type": 6,
+        "codename": "add_worker"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change Специалист",
+        "content_type": 6,
+        "codename": "change_worker"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete Специалист",
+        "content_type": 6,
+        "codename": "delete_worker"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view Специалист",
+        "content_type": 6,
+        "codename": "view_worker"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add Расписание",
+        "content_type": 7,
+        "codename": "add_schedule"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change Расписание",
+        "content_type": 7,
+        "codename": "change_schedule"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete Расписание",
+        "content_type": 7,
+        "codename": "delete_schedule"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view Расписание",
+        "content_type": 7,
+        "codename": "view_schedule"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 8,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 8,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 8,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 8,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 9,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 9,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 9,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 9,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 10,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 10,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 10,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 10,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 11,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 11,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 11,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 11,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 12,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 12,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 12,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 12,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "users",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "beauty_salon",
+        "model": "order"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "beauty_salon",
+        "model": "procedure"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "beauty_salon",
+        "model": "salon"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "beauty_salon",
+        "model": "specialization"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "beauty_salon",
+        "model": "worker"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "beauty_salon",
+        "model": "schedule"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "e6kbk8mnranvyqgy21cetkyx5e2ydcft",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hCmZAbq0r1nIMAwUjU0Ke3KeHdt0oVu_3vvv1SI21rD1ssSJlZnBer0u6WYH6XtgO-x3Wad57YuU9K7og_a9XXm8rwc7t9Bjb1-a4HM0VqwMmR2DiM6kRG9B8tAhKNhQ2wBUBCSd1xIiAUHYwlMYfX-ANsqN3Y:1p2qxS:ex3EwzuuW9BVjL3QgEefrUYJESKwSNuB8XxuNw-fnlE",
+        "expire_date": "2022-12-21T09:43:18.944Z"
+    }
+}
+]
