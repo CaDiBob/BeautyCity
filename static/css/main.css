@@ -320,6 +320,7 @@ padding: 15px;
 }
 .masters__header_img {
 	margin-right: 10px;
+	height: 100px;
 }
 .masters__header_name {
 	font-weight: 500;

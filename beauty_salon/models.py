@@ -10,6 +10,10 @@ class Salon(models.Model):
         max_length=255,
         db_index=True,
     )
+    image = models.ImageField(
+        'Изображение',
+        db_index=True,
+    )
     address = models.CharField(
         'адрес',
         max_length=255,

@@ -1,3 +1,37 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Salon, Procedure, Worker
+
+
+def get_salons(request):
+    salons = Salon.objects.all()
+    services = Procedure.objects.all()
+    masters = Worker.objects.all()
+
+    context = {'salons': [
+        {
+            'name': salon.name,
+            'address': salon.address,
+            'image': salon.image
+         }
+        for salon in salons],
+        'services': [
+        {
+            'name': service.name,
+            'price': service.price,
+            'image': service.image
+         }
+        for service in services],
+        'masters': [
+        {
+            'name': master.name,
+            'specialization': master.specialization,
+            'image': master.foto,
+            'experience': master.experience,
+            'reviews_qty': master.reviews_qty
+         }
+        for master in masters]
+    }
+
+    return render(request, template_name="index.html", context=context)

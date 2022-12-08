@@ -19,11 +19,12 @@ from django.urls import path, include
 from django.shortcuts import render
 
 from . import settings
+from beauty_salon import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', render, kwargs={'template_name': 'index.html'}, name='index'),
+    path('', views.get_salons, name='index'),
     path('service/', render, kwargs={'template_name': 'service.html'}, name='service'),
     path('service/reservation', render, kwargs={'template_name': 'reservation.html'}, name='reservation'),
     path('accounts/profile/', render, kwargs={'template_name': 'profile.html'}, name='profile'),
