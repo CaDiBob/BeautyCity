@@ -1,12 +1,12 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
-from .models import Salon, Procedure, Worker
+from .models import Salon, Service, Worker
 
 
 def get_index(request):
     salons = Salon.objects.all()
-    services = Procedure.objects.all()
+    services = Service.objects.all()
     masters = Worker.objects.all()
 
     context = {'salons': [

@@ -4,9 +4,9 @@ from .models import (
     Order,
     Salon,
     Schedule,
-    Specialization,
+    Category,
     Worker,
-    Procedure
+    Service
 )
 
 
@@ -25,7 +25,7 @@ class ScheduleAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(Specialization)
+@admin.register(Category)
 class SpecializationAdmin(admin.ModelAdmin):
     pass
 
@@ -35,6 +35,6 @@ class WorkerAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(Procedure)
+@admin.register(Service)
 class ProcedureAdmin(admin.ModelAdmin):
     pass

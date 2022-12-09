@@ -35,7 +35,7 @@ class Worker(models.Model):
         db_index=True
     )
     specialization = models.ForeignKey(
-        'Specialization',
+        'Category',
         related_name='workers',
         verbose_name='Специализация',
         on_delete=models.CASCADE,
@@ -70,9 +70,9 @@ class Worker(models.Model):
         verbose_name_plural = 'Специалисты'
 
 
-class Specialization(models.Model):
+class Category(models.Model):
     name = models.CharField(
-        'Наимеование',
+        'Категория услуг',
         max_length=255,
         db_index=True
     )
@@ -104,7 +104,7 @@ class Order(models.Model):
         db_index=True
     )
     procedure = models.ForeignKey(
-        'Procedure',
+        'Service',
         related_name='orders',
         verbose_name='Процедура',
         on_delete=models.CASCADE,
@@ -152,10 +152,17 @@ class Order(models.Model):
         verbose_name_plural = 'Заказы'
 
 
-class Procedure(models.Model):
+class Service(models.Model):
     name = models.CharField(
         'Название процедуры',
         max_length=255,
+        db_index=True
+    )
+    category = models.ForeignKey(
+        'Category',
+        related_name='services',
+        verbose_name='Категория',
+        on_delete=models.CASCADE,
         db_index=True
     )
     descriptions = models.TextField(
