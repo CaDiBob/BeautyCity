@@ -24,7 +24,7 @@ from beauty_salon import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.get_salons, name='index'),
+    path('', views.get_index, name='index'),
     path('service/', render, kwargs={'template_name': 'service.html'}, name='service'),
     path('service/reservation', render, kwargs={'template_name': 'reservation.html'}, name='reservation'),
     path('accounts/profile/', render, kwargs={'template_name': 'profile.html'}, name='profile'),

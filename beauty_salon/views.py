@@ -4,7 +4,7 @@ from django.shortcuts import render
 from .models import Salon, Procedure, Worker
 
 
-def get_salons(request):
+def get_index(request):
     salons = Salon.objects.all()
     services = Procedure.objects.all()
     masters = Worker.objects.all()
