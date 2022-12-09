@@ -28,5 +28,6 @@ urlpatterns = [
     path('service/', render, kwargs={'template_name': 'service.html'}, name='service'),
     path('service/reservation', render, kwargs={'template_name': 'reservation.html'}, name='reservation'),
     path('accounts/profile/', render, kwargs={'template_name': 'profile.html'}, name='profile'),
-    path('accounts/login/', render, kwargs={'template_name': 'service.html'}, name='login')
+    path('accounts/login/', render, kwargs={'template_name': 'service.html'}, name='login'),
+    path('__debug__/', include('debug_toolbar.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
