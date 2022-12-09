@@ -4,3 +4,4 @@ dj-database-url==1.0.0
 Pillow==9.3.0
 phonenumbers==8.13.0
 django-phonenumber-field==7.0.1
+django_debug_toolbar==3.8.1
