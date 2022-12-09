@@ -92,13 +92,13 @@
 						<a href="tel:+79179023800"><button class="header__block_btn">Перезвоните мне</button></a>
 							<div class="header__block_auth">
 							{% if user.is_authenticated %}
-								<img src="{% static 'img/acc.svg' %}" alt="account" class="header__account_img">
-									<a href="#" target="authModal">Войти</a>
+							<img src="{% static 'img/avatars/1.svg' %}" alt="account" class="header__account_img">
+							<form action="{% url 'profile' %}">
+								<a class="header__block_auth__intro">Мария М.</a>
+							</form>
 								{% else %}
-								<img src="{% static 'img/avatars/1.svg' %}" alt="account" class="header__account_img">
-								<form action="{% url 'profile' %}">
-									<a class="header__block_auth__intro">Мария М.</a>
-								</form>
+								<img src="{% static 'img/acc.svg' %}" alt="account" class="header__account_img">
+								<a href="#" target="authModal">Войти</a>
 								{% endif %}
 						</div>
 					</div>

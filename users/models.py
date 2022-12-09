@@ -21,3 +21,15 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.phone
+
+
+class PhoneSubmition(models.Model):
+    phone = PhoneNumberField(
+        'номер телефона',
+        unique=True,
+    )
+
+    code = models.CharField(
+        max_length=4,
+        default='1234'
+    )
