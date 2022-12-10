@@ -20,6 +20,7 @@ from django.shortcuts import render
 
 from . import settings
 from beauty_salon import views
+from users.views import login_or_register
 
 
 urlpatterns = [
@@ -29,5 +30,6 @@ urlpatterns = [
     path('service/reservation', render, kwargs={'template_name': 'reservation.html'}, name='reservation'),
     path('accounts/profile/', render, kwargs={'template_name': 'profile.html'}, name='profile'),
     path('accounts/login/', render, kwargs={'template_name': 'service.html'}, name='login'),
+    path('login/', login_or_register, name='login_or_register'),
     path('__debug__/', include('debug_toolbar.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
