@@ -1,5 +1,8 @@
-from django.http import HttpResponseRedirect
+import json
+
+from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
+from django.views import View
 
 from .models import Salon, Service, Worker
 
@@ -35,3 +38,10 @@ def get_index(request):
     }
 
     return render(request, template_name="index.html", context=context)
+
+
+class LoginMobile(View):
+
+    def post(self, request):
+        request.session
+        return {'status': True}
